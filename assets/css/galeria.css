@@ -1,0 +1,22 @@
+.gallery--img{
+    object-fit: cover;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.gallery--img:hover{
+    transform: scale(1.05);
+}
+
+.gallery--img--small{
+    height: 200px;
+}
+
+.gallery--img--big{
+    height: 400px;
+}
+
+.mostrar{
+    height: 160px;
+}

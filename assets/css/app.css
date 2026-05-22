@@ -1,0 +1,1011 @@
+@import url(slider.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    font-family: serif;
+    text-transform: capitalize;
+}
+
+.btnUpDown{
+    /* background: #ededed; */
+    background: #ededed4a; 
+    width: 150px;
+    height: 50px;
+    display: inline-flex;
+    border-radius: 20px;
+    transform: rotate(90deg);
+    margin-top: 250px;
+    position: fixed;
+   
+    left: 100;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 10000;
+}
+.btnUpDown a{
+    width: 100px;
+    color:#000;
+    text-decoration: none;
+    font-size: 30px;
+    text-align: center;
+}
+
+.btnUpDown:hover{
+    background: #ededed;
+    transition:all .5s ease;
+}
+
+.btnUpDown a:hover{
+    color: #eccc12;
+    background: #000;
+    border-radius: 20px;
+    transition:all .5s ease;
+}
+
+/*------------------ Estilos base----------------- */
+
+img{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+    margin: auto;
+}
+
+.container-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.column{
+    width: 100%;
+}
+
+
+/*------------------ Estilos base----------------- */
+
+.main-header{
+    width: 100%;
+    align-items: center;
+}
+
+ .content-logo{
+    width: 120px;
+    height: 120px;
+ }   
+
+ .content-logo img{
+    border-radius: 100%;
+ }
+
+.logo{
+    font-size: 1.8em;
+    padding: 10px;
+    font-weight: 100;
+    text-align: center;
+    
+}
+
+
+
+/* -----------Estilos del menu---------- */
+
+.main-nav{
+    width: 100%;
+    position: relative;
+    z-index: 2000;
+    padding: 10px;
+    /* display: none; */
+}
+/* 
+.mostrarMain{
+    display: block;
+} */
+
+
+.icon-menu{
+    display: block;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.social-icon{
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-icon [class*="icon-"]{
+    color: black;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.social-icon [class*="icon-"]:hover{
+    background: rgba(255, 255, 255, .2);
+    color: #fff;
+}
+
+.social-icon--link{
+    text-decoration: none;
+}
+
+.menu{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, .85);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    transition: height .5s linear;
+}
+
+.menu--link{
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu--link:hover{
+    background: #692949;
+    color: #fff;
+}
+
+.menu--link-Select{
+    background: #692949;
+}
+
+.mostrar{
+    height: 324px;
+}
+
+/* Estilos del banner */
+
+.banner{
+    margin-top: -60px;
+    position: relative;
+
+}
+
+.banner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    z-index: 1000;
+    top: 0;
+}
+
+.banner img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.banner--content{
+    width: 90%;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    z-index: 1500;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.banner-contact{
+    margin-top: 100px;
+}
+
+
+.banner-contact .banner--content{
+    margin-top: 6400px;
+}
+
+/* Estilos principales */
+.group--color {
+    background: #692949;
+    color: #fff; 
+    padding: 10px;
+    text-align: center;
+}
+
+.main--title{
+    margin: 15px 0;
+    font-size: 1.8em;
+    font-family: serif;
+    font-weight: 100;
+}
+
+.main--text{
+    font-size: 1.3em;
+}
+
+.column--title{
+    font-size: 1.3em;
+}
+
+
+.group--title{
+    font-size: 2.2em;
+    padding: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.card-title{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+/* Esto alinea las cards de los servicios y talleres */
+.today-special .card{
+    display: inline-flex;
+    margin: 0 auto;
+    margin-left: 46px;
+    margin-bottom: 20px;
+    width: 500px;
+    height: 600px;
+    text-align: center;
+}
+
+.today-special .card-img-top{
+    width: 300px;
+    height: 200px;
+}
+
+
+/* GALERIA NOSOOTROS */
+
+.titulo-negocio{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px 0;
+    font-size: 40px;
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(350px, 1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px;
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+.galeria img{
+    width: 100%;
+    vertical-align: top;
+    height: 300px;
+    object-fit: cover;
+}
+
+.galeria > a{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, .8);
+    transition: transform 0.5s;
+    cursor: auto;
+}
+
+.galeria a:hover img{
+    filter: blur(2px);
+    transform: rotate(10deg) scale(1.3);
+}
+
+/* GALERIA DE IMAGENES */
+
+.linea{
+    width: 100%;
+    height: 6px;
+    background: #692949;
+}
+
+/* NOSOTROS */
+
+.container--nosotros{
+    height: 0 auto;
+    background: #ededed;
+}
+
+.container--us{
+    display: inline-flex;
+}
+
+.container--us img{
+    width: 600px;
+    height: auto;
+    object-fit: cover;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+ 
+.container--images img{
+   display: inline-flex;
+   width: 300px;
+   height: 200px;
+   object-fit: cover;
+   margin-bottom: 20px;
+   margin-top: 20px;
+   margin-left: 10px;
+   cursor: pointer; 
+}
+
+/* ESTILOS DEL FOOTER */
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer{
+    background: #24262B;
+    padding: 80px 0;
+}
+
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer--link{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer--link h4{
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 500;
+    border-bottom: 2px solid #692949;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.footer--link ul li a{
+    font-size: 15px;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 15px;
+    transition: all 3s ease;
+}
+
+.footer--link ul li a:hover{
+    color: #ffffff;
+    padding-left: 6px;
+}
+
+.footer--link a{
+    font-size: 15px;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 15px;
+    transition: all 3s ease;
+}
+
+.footer--link .dias-horas{
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 15px;
+    transition: all 3s ease;
+}
+
+
+.footer--link .separate{
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 15px;
+    transition: all 3s ease;
+}
+
+
+
+.derecho{
+    text-align: center;
+    margin-top: 100px;
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.derecho a {
+    text-decoration: none;
+    color: white;
+}
+
+.derecho a:hover{
+    text-decoration: none;
+    color: #000;
+    background: #fff;
+    border-radius: 5px;
+    transition:all .5s ease;
+}
+
+/* Responsive del footer */
+@media screen and (max-width:991px) {
+    .footer-row{
+        text-align: center;
+    }    
+
+    .footer--link{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+/* Estilos minimos responsive */
+
+@media screen and (min-width: 360px){
+    .logo img{
+        margin-left: 62px;
+    }
+
+    .container--nosotros img{
+        width: 300px;
+        height: 200px;
+    }
+
+    .container-us-text{
+        width: 250px;
+        margin-left: -280px;
+        margin-top: 250px;
+    }
+
+    
+    #contactenos{
+        margin-top: 11820px;
+        /* background: purple; */
+    }
+
+
+    .banner-nosotros{
+        margin-top: .05px;
+    }
+
+    .container--images{
+        margin-left: 10px;
+    }
+
+    .card{
+        margin-right: 150px;
+    }
+
+    .form-google{
+        width: 350px;
+    }
+}
+
+@media screen and (min-width:375px){
+
+    .logo{
+       align-items: center;
+    }
+
+    .logo img{
+        margin-left: 80px;
+    }
+
+    .banner-nosotros{
+        margin-top: -5px;
+    }    
+    
+    .container--nosotros{
+        align-items: center;
+    }
+
+    .container--nosotros img{
+        width: 330px;
+        height: 300px;
+        
+    }
+
+    .container-us-text{
+        width: 300px;
+        margin-top: 320px;
+        margin-left: -300px;
+    }
+
+    #contactenos{
+        margin-top: 12170px;
+    }
+
+    .banner-contact .banner--content{
+        margin-top: 11110px;
+        color: #fff;
+    }
+
+    .form-google{
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 390px){
+    .banner-contact .banner--content{
+        margin-top: 11033px;
+        color: #fff;
+    }
+
+    #contactenos{
+        margin-top: 11700px;
+        /* background: purple; */
+    }
+}
+
+@media screen and (min-width: 412px){
+    .container--images{
+        margin-left: 45px;
+    }
+}
+
+@media screen and (min-width: 414px){
+    .banner-contact .banner--content{
+        margin-top: 11050px;
+        color: #fff;
+    }
+
+    
+    #contactenos{
+        margin-top: 11700px;
+    }
+}
+
+@media screen and (min-width:430px){
+    .container--images{
+        margin-left: 49px;
+    }
+}
+
+@media screen and (min-width:480px){
+
+    .container{
+        width: 480px;
+    }
+
+    .logo{
+        color: #fff;
+        align-items: center;
+    }
+
+    .logo img{
+        margin-left: -1px;
+    }
+    .content-logo{
+        margin-left: 76px;
+     }   
+
+    .banner{
+        margin-top: -350px;
+        z-index: -2000;
+    }
+
+    .banner img{
+        width: 100%;
+        height: 1000px;
+        object-fit: cover;
+    }
+
+    .banner--content{
+        margin-top: 130px;
+        font-size: 2em;
+    }
+    
+    .banner-contact .banner--content{
+        margin-top: 10850px;
+        color: #fff;
+    }
+
+    .main--title{
+        font-size: 2.2em;
+        margin-bottom: 20px;
+        font-weight: 500;
+        border-bottom: 2px solid #692949;
+        padding-bottom: 10px;
+        display: inline-block;
+    }
+
+    .main-footer .container-flex{
+        align-items: flex-start;
+    }
+
+    .column-50{
+        width: 50%;
+    }
+
+    .column--50-25{
+        width: 50%;
+    }
+
+    .main-nav{
+        background: black;
+    }
+
+    .menu{
+        margin-top: -10px;
+    }
+
+    .container--nosotros{
+        height: auto;
+    }
+
+    .container--us > img{
+        width: 450px;
+        height: 500px;
+        object-fit: cover;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    
+    .container--images{
+        display:  grid;
+        grid-template-columns: repeat(
+        auto-fill,minmax(
+            150px,
+            .3fr
+        )
+     );
+     gap: 5px;
+    }
+
+    #contactenos{
+        margin-top: 11900px;
+        /* background: purple;  */
+    }
+    
+    .container-us-text{
+        width: 500px;
+        margin-left: -420px;     
+        margin-top: 520px;
+        
+    }
+
+    .form-google{
+        width: 420px;
+    }
+
+    .today-special .card{
+        margin-left: 100px;
+    }
+
+    .social-links{
+        margin-left: 50px;
+    }
+
+   /* .info-talleres {
+        background: red;
+        
+   } */
+}
+
+@media screen and (min-width: 540px){
+
+    #contactenos{
+        margin-top: 11700px;
+        /* background: purple; */
+    }
+}
+
+
+@media screen and (min-width: 768px){
+    .logo{
+        color: #fff;
+        align-items: center;
+    }
+
+    .logo img{
+        margin-left: 15px;
+    }
+
+    
+
+    .main--title{
+        font-size: 2.2em;
+        margin-bottom: 20px;
+        font-weight: 500;
+        border-bottom: 2px solid #692949;
+        padding-bottom: 10px;
+        display: inline-block;
+
+    }
+
+    .main--about-description .column--50:nth-child(2){
+        font-size: 1em;
+    }
+
+    .main--about-description .column--50:nth-child(2) .column--txt{
+        line-height: 30px;
+    }
+
+    .column--50-25{
+        width: 50%;
+    }
+
+    .column--title{
+        font-size: 1em;
+    }
+
+    .group--title{
+        font-size: 2.2em;
+    }
+
+    .container--us{
+        display: inline-flex;
+    }
+
+    .container--us img{
+        width: 400px;
+        height: 400px;
+    }
+
+    .container-us-text{
+        margin-top: -2px;
+        margin-left: 40px;
+    }
+
+    .container--images{
+        margin-left: 75px;
+    }
+
+    .container--images img{
+        width: 500px;
+        height: 250px;
+        margin-left: -30px;
+    }
+
+    .container--images{
+        display:  grid;
+        grid-template-columns: repeat(
+        auto-fill,minmax(
+            150px,
+            1fr
+        )
+     );
+     gap: 16px;
+    }
+
+    #contactenos{
+        margin-top: 7720px;
+        /* background: purple; */
+    }
+
+    .info-talleres {
+        height: 200px;
+        margin-left: -500px;    
+    }
+    
+  .content-imagenes{
+    width: 100%;    
+    background: purple;
+  }
+
+  .today-special .card{
+    margin-left: -20px;
+    margin-left: 30px;
+  }
+
+  .banner-contact .banner--content{
+    margin-top: 6700px;
+    color: #fff;   
+  }
+
+ 
+
+
+
+
+}
+
+@media screen and (min-width: 853px){
+
+    #contactenos{
+        margin-top: 7600px;
+        /* background: purple; */
+    }
+}
+
+@media screen and (min-width: 912px){
+
+    #contactenos{
+        margin-top: 7520px;
+        /* background: purple; */
+    }
+
+
+
+}
+
+@media screen and (min-width:1024px) {
+    .container{
+        width: 1000px;
+    }
+    .logo{
+        font-size: 2em;
+        padding: 0;
+        margin-bottom: 5px;
+        margin-top: 10px;
+        margin-left: 270px;
+    }
+
+    .logo img{
+        margin-left: 30px;
+        width: 250px;
+        height: 0 auto;
+    }
+
+    .main-nav{
+        padding: 5px;
+    }
+
+
+    .banner--content{
+        font-size: 2.5em;
+    }
+
+    .banner-contact .banner--content{
+        margin-top: 6550px;
+        color: #fff;   
+    }
+        
+    .icon-menu{
+        display: none;
+    }
+
+    .menu{
+        position: static;
+        display: flex;
+        width: auto;
+        height: auto;
+        margin-top: 2px;
+        background: rgba(0, 0, 0, .85);
+    }
+
+    .menu--link{
+        padding: 20px;
+    }
+
+    .group--color .container{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+
+    .main--title{
+        font-size: 2.3em;
+    }
+
+    .main--about-description .column--50:nth-child(2) .column--txt{
+        line-height: 50px;
+    }
+
+    .today-special .card-title{
+        font-size: 1.5em;
+    }
+    
+    .container--us{
+        margin-left: 30px;
+    }
+
+    .container--us img{
+        width: 500px;
+        height: 500px;
+    }
+
+    .main--title{
+        margin-bottom: 20px;
+        font-weight: 500;
+        border-bottom: 2px solid #692949;
+        padding-bottom: 10px;
+        display: inline-block;
+    }
+
+    .main-footer{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .info-talleres{
+        margin-left: 100px;
+    }
+
+    .today-special .card{
+        margin-left: -100px;
+        margin-left: 20px;
+    }
+
+    .container--nosotros{
+        align-items: center;
+    }
+
+    .container--us img{
+        width: 700px;
+    }
+
+    .container--nosotros .container-us-text{
+        margin-left: 50px;
+        width: 500px;
+    }
+
+    #contactenos{
+        margin-top: 7700px;
+        /* background: purple; */
+    }
+
+}
+
+@media screen and (min-width:1600px) {
+
+
+    .main--about-description:nth-child(1){
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+    }
+
+    .today-special .card-img-top{
+        height: 600px;
+    }
+
+    .today-special .card img{
+        width: 600px;
+        height: 600px;
+    }
+
+    .banner-contact .banner--content{
+        margin-top: 6000px;
+        color: #fff;
+        font-size: 50px;   
+    }
+
+    .container--us img{
+        width: 800px;
+        height: 700px;
+    }
+
+    
+}
+
+@media screen and (min-width:1280px){
+    
+    #contactenos{
+        margin-top: 7600px;
+        /* background: purple; */
+    }
+    
+}

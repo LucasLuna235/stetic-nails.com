@@ -1,0 +1,87 @@
+/* fondo modal */
+.modal1{
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, .9);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000000;
+    display: none;
+}
+
+/* contenedor centrado */
+.modal--content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* imagen (FIX IMPORTANTE) */
+.modal-img{
+    max-width: 90%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* 🔥 NO RECORTA */
+    border-radius: 10px;
+}
+
+/* botón cerrar */
+.modal--boton{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color:#fff;
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: bold;
+  z-index: 10;
+  transition: .3s;
+}
+
+.modal--boton:hover{
+    color: red;
+}
+
+/* flechas */
+.p_left, .p_right{
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+}
+
+/* descripción */
+.descripcion{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* activar modal */
+.modal--Open{
+    display: block;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 600px){
+    .modal-img{
+        max-width: 95%;
+        max-height: 80vh;
+    }
+
+    .p_left, .p_right{
+        font-size: 30px;
+    }
+
+    .modal--boton{
+        font-size: 2rem;
+    }
+}
