@@ -1,0 +1,319 @@
+leres y Cursos | Stetic & Nails</title>
+  <meta name="description" content="Talleres intensivos y cursos de uñas, pestañas, cejas HD y más en Stetic & Nails, Ixtapaluca.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #c2185b;
+      --primary-dark: #880e4f;
+      --primary-light: #fce4ec;
+      --accent: #f06292;
+      --dark: #1a1a1a;
+      --gray: #666;
+      --light-gray: #f9f4f6;
+      --white: #ffffff;
+      --max-width: 1200px;
+      --transition: all 0.35s ease;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: var(--dark); background: var(--white); }
+    h1,h2,h3 { font-family: 'Playfair Display', serif; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
+    .btn { display: inline-block; padding: 12px 28px; border-radius: 50px; font-weight: 600; transition: var(--transition); cursor: pointer; border: none; font-family: inherit; font-size: 0.95rem; }
+    .btn-primary { background: var(--primary); color: var(--white); }
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(194,24,91,0.35); }
+    .btn-whatsapp { background: #25d366; color: #fff; display: inline-flex; align-items: center; gap: 8px; width: 100%; justify-content: center; }
+    .btn-whatsapp:hover { background: #1ebe57; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,0.35); }
+    .section { padding: 90px 0; }
+    .section-title { text-align: center; font-size: 2.6rem; margin-bottom: 12px; color: var(--primary-dark); }
+    .section-title span { color: var(--primary); }
+    .section-subtitle { text-align: center; color: var(--gray); margin-bottom: 60px; font-size: 1.1rem; }
+
+    /* Top bar */
+    .top-bar { background: var(--primary-dark); color: #fff; font-size: 0.85rem; padding: 7px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .top-bar .contact-info { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+    .top-bar .contact-info i { color: var(--accent); margin-right: 6px; }
+
+    /* Header */
+    header { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.04); transition: var(--transition); }
+    header.scrolled { background: var(--white); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 1.9rem; font-weight: 700; color: var(--primary-dark); display: flex; align-items: center; gap: 10px; }
+    .logo i { color: var(--primary); font-size: 2.1rem; }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a { font-weight: 500; font-size: 0.95rem; color: var(--dark); transition: var(--transition); }
+    .nav-links a:hover { color: var(--primary); }
+    .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.6rem; color: var(--dark); cursor: pointer; }
+
+    /* Hero */
+    .page-hero { position: relative; height: 55vh; min-height: 350px; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--white); overflow: hidden; }
+    .page-hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+    .page-hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(136,14,79,0.85) 0%, rgba(194,24,91,0.7) 100%); z-index: -1; }
+    .page-hero h1 { font-size: 3rem; margin-bottom: 10px; }
+
+    /* Intro */
+    .intro { text-align: center; margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto; }
+    .intro p { font-size: 1.05rem; color: var(--gray); line-height: 1.8; }
+    .intro .duracion { display: flex; justify-content: center; gap: 30px; margin-top: 24px; flex-wrap: wrap; }
+    .intro .duracion div { background: var(--primary-light); padding: 14px 26px; border-radius: 14px; border: 1px solid var(--primary); }
+    .intro .duracion strong { color: var(--primary-dark); font-size: 1.1rem; }
+
+    /* Categorías */
+    .categoria-titulo { font-size: 1.8rem; color: var(--primary-dark); margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+    .categoria-sub { color: var(--gray); margin-bottom: 40px; font-size: 1rem; }
+
+    /* Cards de talleres */
+    .talleres-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .taller-card { background: var(--white); border: 1px solid #eee; border-radius: 20px; overflow: hidden; transition: var(--transition); display: flex; flex-direction: column; }
+    .taller-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-color: var(--primary-light); }
+    .taller-card img { width: 100%; height: 220px; object-fit: cover; }
+    .taller-card .contenido { padding: 26px; display: flex; flex-direction: column; flex: 1; }
+    .taller-card h3 { font-size: 1.4rem; margin-bottom: 10px; color: var(--primary-dark); }
+    .taller-card p { color: var(--gray); font-size: 0.95rem; margin-bottom: 18px; flex: 1; }
+    .duracion-badge { display: inline-block; background: var(--primary-light); color: var(--primary-dark); font-size: 0.8rem; font-weight: 700; padding: 5px 14px; border-radius: 50px; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .taller-card .btn-whatsapp { margin-top: auto; }
+
+    /* CTA fijo */
+    .cta-fijo { position: fixed; bottom: 30px; right: 30px; z-index: 1000; }
+    .cta-fijo .btn-whatsapp { padding: 16px 24px; font-size: 1rem; box-shadow: 0 6px 20px rgba(37,211,102,0.35); }
+
+    /* Footer */
+    footer { background: var(--dark); color: #fff; padding: 50px 0 24px; border-top: 1px solid #333; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 45px; margin-bottom: 40px; }
+    .footer-brand .logo { color: var(--white); margin-bottom: 16px; }
+    .footer-brand p { opacity: 0.75; font-size: 0.95rem; line-height: 1.6; }
+    .footer-links h4, .footer-social h4 { font-size: 1.15rem; margin-bottom: 20px; color: var(--accent); }
+    .footer-links a { display: block; margin-bottom: 10px; opacity: 0.8; transition: var(--transition); }
+    .footer-links a:hover { color: var(--white); opacity: 1; padding-left: 6px; }
+    .socials { display: flex; gap: 14px; }
+    .socials a { width: 44px; height: 44px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: var(--transition); font-size: 1.1rem; }
+    .socials a:hover { background: var(--primary); transform: translateY(-3px); }
+    .footer-bottom { text-align: center; padding-top: 24px; border-top: 1px solid #333; opacity: 0.6; font-size: 0.9rem; }
+
+    /* ESTILOS DEL BOTON */
+
+    .btnUpDown{
+        /* background: #ededed; */
+        background: #ededed4a; 
+        width: 150px;
+        height: 50px;
+        display: inline-flex;
+        border-radius: 20px;
+        transform: rotate(90deg);
+        margin-top: 250px;
+        position: fixed;
+        left: 100;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 10000;
+    }
+    
+    .btnUpDown a{
+        width: 100px;
+        color:#000;
+        text-decoration: none;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .btnUpDown:hover{
+     background: #ededed;
+     transition:all .5s ease;
+    }
+
+    .btnUpDown a:hover{
+      color: #eccc12;
+      background: #000;
+      border-radius: 20px;
+      transition:all .5s ease;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .mobile-menu-btn { display: block; }
+      .nav-links { position: absolute; top: 100%; left: 0; width: 100%; background: var(--white); flex-direction: column; padding: 24px 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); display: none; border-top: 1px solid #eee; }
+      .nav-links.active { display: flex; }
+      .nav-links a { padding: 12px 0; border-bottom: 1px solid #f5f5f5; width: 100%; text-align: center; }
+      .page-hero h1 { font-size: 2.2rem; }
+      .cta-fijo { bottom: 20px; right: 20px; }
+      .cta-fijo .btn-whatsapp { padding: 14px 20px; font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+    <br></br>
+  <div class="top-bar">
+    <div class="contact-info">
+      <span><i class="fa-solid fa-phone"></i> +52 55 7851 1544</span>
+      <span><i class="fa-solid fa-clock"></i> Lun–Vie 9:00–19:00</span>
+    </div>
+    <div>
+      <a href="https://wa.me/525578511544?text=Hola%20quiero%20info%20sobre%20los%20talleres" class="btn btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Consultar talleres</a>
+    </div>
+  </div>
+
+  <header id="header">
+    <nav class="container">
+      <a href="../index.html" class="logo"><i class="fa-solid fa-nail-polish"></i> Stetic &amp; Nails</a>
+      <button class="mobile-menu-btn" id="mobileBtn"><i class="fa-solid fa-bars"></i></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="talleres.html" style="color: var(--primary);">Talleres y Cursos</a></li>
+        <li><a href="../index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <img src="../imagenes/Cursos/Cursos1.jpg" alt="Talleres y Cursos" class="page-hero-bg">
+    <div class="page-hero-overlay"></div>
+    <h1>Talleres y Cursos</h1>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Capacitación en <span>Belleza</span></h2>
+      <p class="section-subtitle">Aprende técnicas profesionales de uñas, pestañas y cejas con nuestras certificacións.</p>
+
+      <div class="intro">
+        <p>Formamos a nuevas manicuristas y esteticistas con técnicas modernas, productos de calidad y atención personalizada. ¡Invierte en tu talento y haz crecer tu negocio!</p>
+        <div class="duracion">
+          <div><strong>Talleres Intensivos:</strong> 2 a 3 días</div>
+          <div><strong>Cursos:</strong> 2 meses</div>
+        </div>
+      </div>
+
+      <div class="categoria">
+        <h3 class="categoria-titulo"><i class="fa-solid fa-certificate"></i> Talleres Intensivos</h3>
+        <p class="categoria-sub">Ideal para aprender rápido una técnica específica y comenzar a ofrecer el servicio.</p>
+        <div class="talleres-grid">
+          <div class="taller-card">
+            <img src="../imagenes/Servicios/Soft-Gel.jpeg" alt="Taller de Uñas Soft Gel">
+            <div class="contenido">
+              <span class="duracion-badge">2 a 3 días</span>
+              <h3>Taller de Uñas</h3>
+              <p>Técnica de extensión con Soft Gel y tips flexibles. Aprenderás adhesión, modelado y acabado profesional sobre la uña natural.</p>
+              <a href="https://wa.me/525578511544?text=Hola%20quiero%20info%20sobre%20el%20taller%20de%20u%C3%B1as" class="btn btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Consultar cupo</a>
+            </div>
+          </div>
+          <div class="taller-card">
+            <img src="../imagenes/Servicios/perfilado.jfif" alt="Taller de Cejas HD">
+            <div class="contenido">
+              <span class="duracion-badge">2 a 3 días</span>
+              <h3>Taller de Cejas HD</h3>
+              <p>Diseño de cejas semipermanente adaptado a la forma del rostro. Técnica de tatuaje para cejas perfectas y naturales.</p>
+              <a href="https://wa.me/525578511544?text=Hola%20quiero%20info%20sobre%20el%20taller%20de%20cejas%20HD" class="btn btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Consultar cupo</a>
+            </div>
+          </div>
+          <div class="taller-card">
+            <img src="../imagenes/Servicios/pxp.jpeg" alt="Taller de Lifting de Pestañas">
+            <div class="contenido">
+              <span class="duracion-badge">2 a 3 días</span>
+              <h3>Taller de Lifting de Pestañas</h3>
+              <p>Rizado y moldeo de pestañas naturales para elevar la mirada de forma sofisticada y duradera.</p>
+              <a href="https://wa.me/525578511544?text=Hola%20quiero%20info%20sobre%20el%20taller%20de%20lifting%20de%20pesta%C3%B1as" class="btn btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Consultar cupo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="categoria" style="margin-top: 80px;">
+        <h3 class="categoria-titulo"><i class="fa-solid fa-graduation-cap"></i> Cursos Profesionales</h3>
+        <p class="categoria-sub">Formación más profunda con certificación. Ideal para quienes quieren especializarse y emprender.</p>
+        <div class="talleres-grid">
+          <div class="taller-card">
+            <img src="../imagenes/Cursos/Gelish1.jpg" alt="Curso de Gelish">
+            <div class="contenido">
+              <span class="duracion-badge">2 meses</span>
+              <h3>Curso de Gelish / Semipermanente</h3>
+              <p>Aplicación de esmaltes de larga duración, secado UV/LED y técnicas de manicura completa.</p>
+              <a href="https://wa.me/525578511544?text=Hola%20quiero%20info%20sobre%20el%20curso%20de%20gelish" class="btn btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Consultar cupo</a>
+            </div>
+          </div>
+          <div class="taller-card">
+            <img src="../imagenes/Cursos/Pestañas.webp" alt="Curso de Pestañas">
+            <div class="contenido">
+              <span class="duracion-badge">2 meses</span>
+              <h3>Curso de Pestañas</h3>
+              <p>Técnicas de extensión, lifting y cuidado de pestañas para una mirada impactante.</p>
+              <a href="https://wa.me/525578511544?text=Hola%20quiero%20info%20sobre%20el%20curso%20de%20pesta%C3%B1as" class="btn btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Consultar cupo</a>
+            </div>
+          </div>
+          <div class="taller-card">
+            <img src="../imagenes/Cursos/cejas_hd.webp" alt="Curso de Cejas HD">
+            <div class="contenido">
+              <span class="duracion-badge">2 meses</span>
+              <h3>Curso de Cejas HD</h3>
+              <p>Diseño, visagismo y aplicación de cejas semipermanentes de alta definición.</p>
+              <a href="https://wa.me/525578511544?text=Hola%20quiero%20info%20sobre%20el%20curso%20de%20cejas%20HD" class="btn btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Consultar cupo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 60px;">
+        <a href="https://wa.me/525578511544?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20talleres%20y%20cursos" class="btn btn-primary" target="_blank"><i class="fa-brands fa-whatsapp"></i> Quiero más información</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-fijo">
+    <a href="https://wa.me/525578511544?text=Hola%20quiero%20info%20sobre%20los%20talleres%20y%20cursos" class="btn btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Consultar por WhatsApp</a>
+  </div>
+
+  <footer id="Footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo"><i class="fa-solid fa-nail-polish"></i> Stetic &amp; Nails</a>
+          <p>Más de 8 años de experiencia en belleza y estética. Tu imagen en las mejores manos.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Enlaces rápidos</h4>
+          <a href="../index.html">Inicio</a>
+          <a href="galeria.html">Galería</a>
+          <a href="../index.html#contacto">Contacto</a>
+        </div>
+        <div class="footer-social">
+          <h4>Síguenos</h4>
+          <div class="socials">
+            <a href="https://www.facebook.com/profile.php?id=100063918224039" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/steticnails61" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://whatsapp.com/channel/0029VbBOx707tkj6UmsXPe3S" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2025 Stetic &amp; Nails – Todos los derechos reservados. Desarrollado por <a href="https://lucasluna235.github.io/LEL-Desarrollos-Web/" target="_blank" style="color: var(--accent);">LEL Desarrollos Web</a>
+      </div>
+    </div>
+  </footer>
+  <!-- Boton sube y baja -->
+  <!-- <div class="btnUpDown">
+  <a href="#"><</a><a href="#Footer">></a>
+  </div>  -->
+  <script src="assets/js/scroll.js"></script>
+  <!-- <script>
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    const btn = document.getElementById('mobileBtn');
+    const links = document.getElementById('navLinks');
+    btn.addEventListener('click', () => links.classList.toggle('active'));
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => links.classList.remove('active'));
+    });
+  </script> -->
+</body>
+</html>

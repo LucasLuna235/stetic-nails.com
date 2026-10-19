@@ -1,0 +1,53 @@
+[
+    {
+        "imagen":"../Imagenes/Uñas/Uñas Rosas.jpeg",
+        "categoria":"rosas",
+        "titulo":"Rosas"
+    },
+    {
+        "imagen":"../Imagenes/Uñas/azules y rosas.jpeg",
+        "categoria":"azules",
+        "titulo":"Azules y rosas"
+    },
+    {
+        "imagen":"../Imagenes/Uñas/uñas rosas y celestes.jpeg",
+        "categoria":"rosas",
+        "titulo":"Rosas y celestes"
+    },
+    {
+        "imagen":"../Imagenes/Uñas/Uñas Rojas.jpeg",
+        "categoria":"rosas",
+        "titulo":"Rosas con blanco"
+    },
+    {
+        "imagen":"../Imagenes/Uñas/Lilas.jpeg",
+        "categoria":"lilas",
+        "titulo":"Lilas"
+    },
+    {
+        "imagen":"../Imagenes/Uñas/Uas Negras Blancas y Gris.jpeg",
+        "categoria":"negras",
+        "titulo":"Negras Blancas y gris"
+    },
+    {
+        "imagen":"../Imagenes/Uñas/Uñas Verdes y Negras.jpeg",
+        "categoria":"verdes",
+        "titulo":"Verdes y negras"
+    },
+    {
+        "imagen":"../Imagenes/Uñas/Uas negras y brillantes.jpeg",
+        "categoria":"negras",
+        "titulo":"Negras Brillantes"
+    },
+    {
+        "imagen":"../Imagenes/Uñas/02499968-03fe-4ce7-810b-44898abbced3.jpg",
+        "categoria":"otros",
+        "titulo":"Trabajo 2025"
+    },
+    {
+        "imagen":"../Imagenes/Uñas/df640cab-de29-41bc-a855-4172723007b3.jpg",
+        "categoria":"otros",
+        "titulo":"Trabajo 2025"
+    }
+    
+]
