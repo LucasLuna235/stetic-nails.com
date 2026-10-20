@@ -1,89 +1,56 @@
-const JSON_URL = "../data/galeria.json";
 
-const grid = document.getElementById('galeriaGrid');
-const btnFiltros = document.querySelectorAll('.filtro-btn');
-let datos = [];
+const contenedor = document.getElementById("galeriaGrid");
 
-// Lightbox
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightboxImg');
-const lightboxCaption = document.getElementById('lightboxCaption');
-const btnCerrar = document.getElementById('cerrarLightbox');
+document.addEventListener("DOMContentLoaded", cargarGaleria);
 
-// Cargar JSON
 async function cargarGaleria() {
-  try {
-    const respuesta = await fetch(JSON_URL);
-    if (!respuesta.ok) throw new Error('No se pudo cargar el JSON: ' + respuesta.status);
-    datos = await respuesta.json();
-    renderizar('todos');
-  } catch (error) {
-    console.error('Error galería:', error);
-    if (grid) grid.innerHTML = `<p style="text-align:center;color:#c2185b;grid-column:1/-1;">Error cargando la galería: ${error.message}</p>`;
-  }
+    if (!contenedor) {
+        console.error("No se encontró el elemento #galeriaGrid en el HTML.");
+        return;
+    }
+
+    try {
+        const respuesta = await fetch("../data/galeria.json");
+
+        if (!respuesta.ok) {
+            throw new Error(
+                `Error al cargar galeria.json: HTTP ${respuesta.status}`
+            );
+        }
+
+        const fotos = await respuesta.json();
+
+        if (!Array.isArray(fotos)) {
+            throw new Error("El JSON debe contener un arreglo de fotos.");
+        }
+
+        contenedor.innerHTML = "";
+
+        fotos.forEach(foto => {
+            const elemento = document.createElement("div");
+            elemento.classList.add("galeria-item");
+
+            elemento.dataset.categoria = foto.categoria;
+            elemento.dataset.titulo = foto.titulo;
+
+            const imagen = document.createElement("img");
+            imagen.src = foto.imagen;
+            imagen.alt = foto.titulo || "Trabajo de Stetic & Nails";
+            imagen.loading = "lazy";
+
+            imagen.addEventListener("error", () => {
+                console.error("No se pudo cargar la imagen:", foto.imagen);
+            });
+
+            elemento.appendChild(imagen);
+            contenedor.appendChild(elemento);
+        });
+
+        console.log(`Galería cargada: ${fotos.length} fotos.`);
+
+    } catch (error) {
+        console.error("Error en la galería:", error);
+        contenedor.innerHTML =
+            "<p>No se pudo cargar la galería. Revisá la consola.</p>";
+    }
 }
-
-// Renderizar tarjetas
-function renderizar(categoria) {
-  if (!grid) return;
-  grid.innerHTML = '';
-
-  const filtrados = categoria === 'todos'
-    ? datos
-    : datos.filter(item => item.categoria === categoria);
-
-  filtrados.forEach(item => {
-    const card = document.createElement('div');
-    card.className = 'galeria-item';
-    card.dataset.categoria = item.categoria;
-    card.dataset.titulo = item.titulo;
-
-    card.innerHTML = `
-      <img src="${item.archivo}" alt="${item.titulo}" loading="lazy">
-    `;
-
-    card.addEventListener('click', () => abrirLightbox(item));
-    grid.appendChild(card);
-  });
-}
-
-// Filtros
-btnFiltros.forEach(btn => {
-  btn.addEventListener('click', () => {
-    btnFiltros.forEach(b => b.classList.remove('activo'));
-    btn.classList.add('activo');
-    renderizar(btn.dataset.filtro);
-  });
-});
-
-// Lightbox
-function abrirLightbox(item) {
-  if (!lightbox) return;
-  lightboxImg.src = item.archivo;
-  lightboxImg.alt = item.titulo;
-  lightboxCaption.textContent = item.titulo;
-  lightbox.classList.add('activo');
-  document.body.style.overflow = 'hidden';
-}
-
-function cerrarLightbox() {
-  lightbox.classList.remove('activo');
-  document.body.style.overflow = '';
-}
-
-if (btnCerrar) btnCerrar.addEventListener('click', cerrarLightbox);
-
-if (lightbox) {
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) cerrarLightbox();
-  });
-}
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && lightbox.classList.contains('activo')) {
-    cerrarLightbox();
-  }
-});
-
-// Iniciar
-document.addEventListener('DOMContentLoaded', cargarGaleria);
