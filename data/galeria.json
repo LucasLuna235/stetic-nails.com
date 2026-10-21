@@ -180,16 +180,6 @@
     "alt": "Uñas Stetic & Nails Acrílico Negras Blancas y Gris"
   },
   {
-    "id": 19,
-    "imagen": "../imagenes/Uñas/Uñas negras y brillantes.jpeg",
-    "titulo": "Acrílico Negras Brillantes",
-    "categoria": "Acrílico",
-    "descripcion": "Uñas acrílicas negras con acabado brillante",
-    "orden": 19,
-    "destacado": false,
-    "alt": "Uñas Stetic & Nails Acrílico Negras Brillantes"
-  },
-  {
     "id": 20,
     "imagen": "../imagenes/Uñas/Uñas Blancas1.jpeg",
     "titulo": "Francesa Blancas",
