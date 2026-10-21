@@ -1,53 +1,592 @@
 [
-    {
-        "imagen":"../imagenes/Uñas/Uñas Rosas.jpeg",
-        "categoria":"rosas",
-        "titulo":"Rosas"
-    },
-    {
-        "imagen":"../imagenes/Uñas/azules y rosas.jpeg",
-        "categoria":"azules",
-        "titulo":"Azules y rosas"
-    },
-    {
-        "imagen":"../imagenes/Uñas/uñas rosas y celestes.jpeg",
-        "categoria":"rosas",
-        "titulo":"Rosas y celestes"
-    },
-    {
-        "imagen":"../imagenes/Uñas/Uñas Rojas.jpeg",
-        "categoria":"naranja",
-        "titulo":"Rosas con blanco"
-    },
-    {
-        "imagen":"../imagenes/Uñas/Lilas.jpeg",
-        "categoria":"lilas",
-        "titulo":"Lilas"
-    },
-    {
-        "imagen":"../imagenes/Uñas/Uas Negras Blancas y Gris.jpeg",
-        "categoria":"negras",
-        "titulo":"Negras Blancas y gris"
-    },
-    {
-        "imagen":"../imagenes/Uñas/Uñas Verdes y Negras.jpeg",
-        "categoria":"verdes",
-        "titulo":"Verdes y negras"
-    },
-    {
-        "imagen":"../imagenes/Uñas/Uas negras y brillantes.jpeg",
-        "categoria":"negras",
-        "titulo":"Negras Brillantes"
-    },
-    {
-        "imagen":"../imagenes/Uñas/02499968-03fe-4ce7-810b-44898abbced3.jpg",
-        "categoria":"otros",
-        "titulo":"Trabajo 2025"
-    },
-    {
-        "imagen":"../imagenes/Uñas/df640cab-de29-41bc-a855-4172723007b3.jpg",
-        "categoria":"otros",
-        "titulo":"Trabajo 2025"
-    }
-    
+  {
+    "id": 1,
+    "imagen": "../imagenes/Uñas/02499968-03fe-4ce7-810b-44898abbced3.jpg",
+    "titulo": "Francesa Clásica",
+    "categoria": "Francesa",
+    "descripcion": "Diseño de uñas francés realizado en el salón Stetic & Nails",
+    "orden": 1,
+    "destacado": true,
+    "alt": "Uñas Stetic & Nails Francesa Clásica"
+  },
+  {
+    "id": 2,
+    "imagen": "../imagenes/Uñas/1e35fabd-6d8d-4b37-a0b1-a55e0e2f29ed.jpg",
+    "titulo": "Acrílico Brillo",
+    "categoria": "Acrílico",
+    "descripcion": "Uñas acrílicas con acabado brillante",
+    "orden": 2,
+    "destacado": true,
+    "alt": "Uñas Stetic & Nails Acrílico Brillo"
+  },
+  {
+    "id": 3,
+    "imagen": "../imagenes/Uñas/278477044_710331367061442_3384983759373214985_n.jpg",
+    "titulo": "Gel Natural",
+    "categoria": "Gel",
+    "descripcion": "Uñas de gel con acabado natural",
+    "orden": 3,
+    "destacado": true,
+    "alt": "Uñas Stetic & Nails Gel Natural"
+  },
+  {
+    "id": 4,
+    "imagen": "../imagenes/Uñas/336040125_3315199665447772_5690092139629529991_n.jpg",
+    "titulo": "Nail Art Decorado",
+    "categoria": "Nail Art",
+    "descripcion": "Diseño de nail art decorado",
+    "orden": 4,
+    "destacado": true,
+    "alt": "Uñas Stetic & Nails Nail Art Decorado"
+  },
+  {
+    "id": 5,
+    "imagen": "../imagenes/Uñas/343149463_571156231675160_6890902932104620335_n (1).jpg",
+    "titulo": "Baby Boomer",
+    "categoria": "Baby Boomer",
+    "descripcion": "Degradado baby boomer en uñas",
+    "orden": 5,
+    "destacado": true,
+    "alt": "Uñas Stetic & Nails Baby Boomer"
+  },
+  {
+    "id": 6,
+    "imagen": "../imagenes/Uñas/3bec42b4-054c-4d98-9497-dfbdce0b0889.jpg",
+    "titulo": "Pedicure Spa",
+    "categoria": "Pedicure",
+    "descripcion": "Tratamiento de pedicure en el salón",
+    "orden": 6,
+    "destacado": true,
+    "alt": "Uñas Stetic & Nails Pedicure Spa"
+  },
+  {
+    "id": 7,
+    "imagen": "../imagenes/Uñas/3d3e00a7-625a-4e80-8b00-665b00023c16.jpg",
+    "titulo": "Sólido Neutro",
+    "categoria": "Sólidos",
+    "descripcion": "Uñas en color sólido neutro",
+    "orden": 7,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Sólido Neutro"
+  },
+  {
+    "id": 8,
+    "imagen": "../imagenes/Uñas/4b109f92-e43a-4717-8636-8bec4bcbd6f0.jpg",
+    "titulo": "Francesa Moderna",
+    "categoria": "Francesa",
+    "descripcion": "Diseño francés moderno",
+    "orden": 8,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Francesa Moderna"
+  },
+  {
+    "id": 9,
+    "imagen": "../imagenes/Uñas/5958f223-0816-45af-98f9-373f0ac5fa27.jpg",
+    "titulo": "Acrílico Forma Almendra",
+    "categoria": "Acrílico",
+    "descripcion": "Uñas acrílicas forma almendra",
+    "orden": 9,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Acrílico Forma Almendra"
+  },
+  {
+    "id": 10,
+    "imagen": "../imagenes/Uñas/6817a4e6-4945-4147-b57a-e5ea9b3fe29c.jpg",
+    "titulo": "Gel Color Pastel",
+    "categoria": "Gel",
+    "descripcion": "Uñas de gel en color pastel",
+    "orden": 10,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Gel Color Pastel"
+  },
+  {
+    "id": 11,
+    "imagen": "../imagenes/Uñas/7bdf800a-442a-46ca-9361-72996324cf26.jpg",
+    "titulo": "Nail Art Geométrico",
+    "categoria": "Nail Art",
+    "descripcion": "Diseño geométrico en uñas",
+    "orden": 11,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Nail Art Geométrico"
+  },
+  {
+    "id": 12,
+    "imagen": "../imagenes/Uñas/azules y rosas.jpeg",
+    "titulo": "Nail Art Azules y Rosas",
+    "categoria": "Nail Art",
+    "descripcion": "Uñas con diseño en tonos azules y rosas",
+    "orden": 12,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Nail Art Azules y Rosas"
+  },
+  {
+    "id": 13,
+    "imagen": "../imagenes/Uñas/df640cab-de29-41bc-a855-4172723007b3.jpg",
+    "titulo": "Sólido Elegante",
+    "categoria": "Sólidos",
+    "descripcion": "Uñas en color sólido elegante",
+    "orden": 13,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Sólido Elegante"
+  },
+  {
+    "id": 14,
+    "imagen": "../imagenes/Uñas/e3b5f008-e1a2-4051-af9a-157280863c53.jpg",
+    "titulo": "Francesa Punta Blanca",
+    "categoria": "Francesa",
+    "descripcion": "Francesa con punta blanca tradicional",
+    "orden": 14,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Francesa Punta Blanca"
+  },
+  {
+    "id": 15,
+    "imagen": "../imagenes/Uñas/f76dd573-4273-4e5e-b5be-213a4e36fdaf.jpg",
+    "titulo": "Acrílico Longitud Media",
+    "categoria": "Acrílico",
+    "descripcion": "Uñas acrílicas longitud media",
+    "orden": 15,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Acrílico Longitud Media"
+  },
+  {
+    "id": 16,
+    "imagen": "../imagenes/Uñas/f8e32962-aeb4-4dbd-ba80-a0d574b3a05f.jpg",
+    "titulo": "Gel Brillo Espejo",
+    "categoria": "Gel",
+    "descripcion": "Uñas de gel con brillo espejo",
+    "orden": 16,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Gel Brillo Espejo"
+  },
+  {
+    "id": 17,
+    "imagen": "../imagenes/Uñas/Lilas.jpeg",
+    "titulo": "Nail Art Lilas",
+    "categoria": "Nail Art",
+    "descripcion": "Uñas con diseño en tono lila",
+    "orden": 17,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Nail Art Lilas"
+  },
+  {
+    "id": 18,
+    "imagen": "../imagenes/Uñas/Uas Negras Blancas y Gris.jpeg",
+    "titulo": "Acrílico Negras Blancas y Gris",
+    "categoria": "Acrílico",
+    "descripcion": "Uñas acrílicas negras, blancas y gris",
+    "orden": 18,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Acrílico Negras Blancas y Gris"
+  },
+  {
+    "id": 19,
+    "imagen": "../imagenes/Uñas/Uñas negras y brillantes.jpeg",
+    "titulo": "Acrílico Negras Brillantes",
+    "categoria": "Acrílico",
+    "descripcion": "Uñas acrílicas negras con acabado brillante",
+    "orden": 19,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Acrílico Negras Brillantes"
+  },
+  {
+    "id": 20,
+    "imagen": "../imagenes/Uñas/Uñas Blancas1.jpeg",
+    "titulo": "Francesa Blancas",
+    "categoria": "Francesa",
+    "descripcion": "Francesa en uñas blancas",
+    "orden": 20,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Francesa Blancas"
+  },
+  {
+    "id": 21,
+    "imagen": "../imagenes/Uñas/Uñas Blancas2.jpg",
+    "titulo": "Francesa Blancas",
+    "categoria": "Francesa",
+    "descripcion": "Francesa en uñas blancas",
+    "orden": 21,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Francesa Blancas"
+  },
+  {
+    "id": 22,
+    "imagen": "../imagenes/Uñas/Uñas Blancas3.jpeg",
+    "titulo": "Francesa Blancas",
+    "categoria": "Francesa",
+    "descripcion": "Francesa en uñas blancas",
+    "orden": 22,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Francesa Blancas"
+  },
+  {
+    "id": 23,
+    "imagen": "../imagenes/Uñas/Uñas Blancas4.jpg",
+    "titulo": "Francesa Blancas",
+    "categoria": "Francesa",
+    "descripcion": "Francesa en uñas blancas",
+    "orden": 23,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Francesa Blancas"
+  },
+  {
+    "id": 24,
+    "imagen": "../imagenes/Uñas/Uñas Blancas5.jpeg",
+    "titulo": "Francesa Blancas",
+    "categoria": "Francesa",
+    "descripcion": "Francesa en uñas blancas",
+    "orden": 24,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Francesa Blancas"
+  },
+  {
+    "id": 25,
+    "imagen": "../imagenes/Uñas/Uñas Blancas6.jpeg",
+    "titulo": "Francesa Blancas",
+    "categoria": "Francesa",
+    "descripcion": "Francesa en uñas blancas",
+    "orden": 25,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Francesa Blancas"
+  },
+  {
+    "id": 26,
+    "imagen": "../imagenes/Uñas/uñas negras y blancas.jpeg",
+    "titulo": "Acrílico Negras y Blancas",
+    "categoria": "Acrílico",
+    "descripcion": "Uñas acrílicas negras y blancas",
+    "orden": 26,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Acrílico Negras y Blancas"
+  },
+  {
+    "id": 27,
+    "imagen": "../imagenes/Uñas/Uñas Negras y Brillantes.jpeg",
+    "titulo": "Acrílico Negras Brillantes",
+    "categoria": "Acrílico",
+    "descripcion": "Uñas acrílicas negras brillantes",
+    "orden": 27,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Acrílico Negras Brillantes"
+  },
+  {
+    "id": 28,
+    "imagen": "../imagenes/Uñas/Uñas Rojas.jpeg",
+    "titulo": "Gel Rojo",
+    "categoria": "Gel",
+    "descripcion": "Uñas de gel en color rojo",
+    "orden": 28,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Gel Rojo"
+  },
+  {
+    "id": 29,
+    "imagen": "../imagenes/Uñas/Uñas Rosas Blancas y Negras.jpeg",
+    "titulo": "Nail Art Rosas Blancas y Negras",
+    "categoria": "Nail Art",
+    "descripcion": "Diseño de nail art rosas, blancas y negras",
+    "orden": 29,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Nail Art Rosas Blancas y Negras"
+  },
+  {
+    "id": 30,
+    "imagen": "../imagenes/Uñas/uñas rosas y celestes.jpeg",
+    "titulo": "Nail Art Rosas y Celestes",
+    "categoria": "Nail Art",
+    "descripcion": "Diseño de nail art en tonos rosas y celestes",
+    "orden": 30,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Nail Art Rosas y Celestes"
+  },
+  {
+    "id": 31,
+    "imagen": "../imagenes/Uñas/Uñas Rosas.jpeg",
+    "titulo": "Sólido Rosa",
+    "categoria": "Sólidos",
+    "descripcion": "Uñas en color sólido rosa",
+    "orden": 31,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Sólido Rosa"
+  },
+  {
+    "id": 32,
+    "imagen": "../imagenes/Uñas/Uñas Verdes y Negras.jpeg",
+    "titulo": "Acrílico Verdes y Negras",
+    "categoria": "Acrílico",
+    "descripcion": "Uñas acrílicas verdes y negras",
+    "orden": 32,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Acrílico Verdes y Negras"
+  },
+  {
+    "id": 33,
+    "imagen": "../imagenes/Uñas/ur.jpeg",
+    "titulo": "Sólido Diseño",
+    "categoria": "Sólidos",
+    "descripcion": "Uñas en color sólido",
+    "orden": 33,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Sólido Diseño"
+  },
+  {
+    "id": 34,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2023-03-14 at 22.52.40 (1).jpeg",
+    "titulo": "Francesa",
+    "categoria": "Francesa",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 34,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Francesa"
+  },
+  {
+    "id": 35,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2023-03-14 at 22.52.40.jpeg",
+    "titulo": "Acrílico",
+    "categoria": "Acrílico",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 35,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Acrílico"
+  },
+  {
+    "id": 36,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2023-03-14 at 22.52.41 (1).jpeg",
+    "titulo": "Gel",
+    "categoria": "Gel",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 36,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Gel"
+  },
+  {
+    "id": 37,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2023-03-14 at 22.52.41.jpeg",
+    "titulo": "Nail Art",
+    "categoria": "Nail Art",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 37,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Nail Art"
+  },
+  {
+    "id": 38,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2023-03-14 at 22.52.45 (1).jpeg",
+    "titulo": "Baby Boomer",
+    "categoria": "Baby Boomer",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 38,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Baby Boomer"
+  },
+  {
+    "id": 39,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2023-03-14 at 22.52.46 (1).jpeg",
+    "titulo": "Pedicure",
+    "categoria": "Pedicure",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 39,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Pedicure"
+  },
+  {
+    "id": 40,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2023-03-14 at 22.52.46 (2).jpeg",
+    "titulo": "Sólidos",
+    "categoria": "Sólidos",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 40,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Sólidos"
+  },
+  {
+    "id": 41,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2023-03-14 at 22.52.46.jpeg",
+    "titulo": "Francesa",
+    "categoria": "Francesa",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 41,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Francesa"
+  },
+  {
+    "id": 42,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2023-03-14 at 22.52.47 (1).jpeg",
+    "titulo": "Acrílico",
+    "categoria": "Acrílico",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 42,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Acrílico"
+  },
+  {
+    "id": 43,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2023-03-14 at 22.52.47 (2).jpeg",
+    "titulo": "Gel",
+    "categoria": "Gel",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 43,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Gel"
+  },
+  {
+    "id": 44,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2023-03-14 at 22.52.47.jpeg",
+    "titulo": "Nail Art",
+    "categoria": "Nail Art",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 44,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Nail Art"
+  },
+  {
+    "id": 45,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2023-03-14 at 22.52.48 (1).jpeg",
+    "titulo": "Baby Boomer",
+    "categoria": "Baby Boomer",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 45,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Baby Boomer"
+  },
+  {
+    "id": 46,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2023-03-14 at 22.52.48 (2).jpeg",
+    "titulo": "Pedicure",
+    "categoria": "Pedicure",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 46,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Pedicure"
+  },
+  {
+    "id": 47,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2023-12-27 at 12.49.57.jpeg",
+    "titulo": "Sólidos",
+    "categoria": "Sólidos",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 47,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Sólidos"
+  },
+  {
+    "id": 48,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2023-12-27 at 12.50.02.jpeg",
+    "titulo": "Francesa",
+    "categoria": "Francesa",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 48,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Francesa"
+  },
+  {
+    "id": 49,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2023-12-27 at 12.50.03.jpeg",
+    "titulo": "Acrílico",
+    "categoria": "Acrílico",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 49,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Acrílico"
+  },
+  {
+    "id": 50,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2023-12-27 at 12.50.04 (1).jpeg",
+    "titulo": "Gel",
+    "categoria": "Gel",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 50,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Gel"
+  },
+  {
+    "id": 51,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2023-12-27 at 12.50.04.jpeg",
+    "titulo": "Nail Art",
+    "categoria": "Nail Art",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 51,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Nail Art"
+  },
+  {
+    "id": 52,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2023-12-27 at 12.50.06.jpeg",
+    "titulo": "Baby Boomer",
+    "categoria": "Baby Boomer",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 52,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Baby Boomer"
+  },
+  {
+    "id": 53,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2023-12-27 at 12.50.10 (1).jpeg",
+    "titulo": "Pedicure",
+    "categoria": "Pedicure",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 53,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Pedicure"
+  },
+  {
+    "id": 54,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2023-12-27 at 12.50.10.jpeg",
+    "titulo": "Sólidos",
+    "categoria": "Sólidos",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 54,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Sólidos"
+  },
+  {
+    "id": 55,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2023-12-27 at 12.50.14.jpeg",
+    "titulo": "Francesa",
+    "categoria": "Francesa",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 55,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Francesa"
+  },
+  {
+    "id": 56,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2025-03-18 at 19.43.27.jpeg",
+    "titulo": "Acrílico",
+    "categoria": "Acrílico",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 56,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Acrílico"
+  },
+  {
+    "id": 57,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2025-03-23 at 16.11.28.jpeg",
+    "titulo": "Gel",
+    "categoria": "Gel",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 57,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Gel"
+  },
+  {
+    "id": 58,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2025-03-23 at 16.11.29 (1).jpeg",
+    "titulo": "Nail Art",
+    "categoria": "Nail Art",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 58,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Nail Art"
+  },
+  {
+    "id": 59,
+    "imagen": "../imagenes/Uñas/WhatsApp Image 2025-03-23 at 16.11.29.jpeg",
+    "titulo": "Baby Boomer",
+    "categoria": "Baby Boomer",
+    "descripcion": "Diseño de uñas realizado en el salón Stetic & Nails",
+    "orden": 59,
+    "destacado": false,
+    "alt": "Uñas Stetic & Nails Baby Boomer"
+  }
 ]

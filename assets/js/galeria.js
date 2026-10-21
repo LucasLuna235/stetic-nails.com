@@ -60,8 +60,8 @@ function renderizar(categoria) {
   }
   grid.innerHTML = "";
 
-  const filtrados = categoria === "todos" 
-    ? datos 
+  const filtrados = categoria === "todos"
+    ? datos
     : datos.filter(item => item.categoria === categoria);
 
   console.log("[GALERIA] Cantidad a mostrar:", filtrados.length);
@@ -77,61 +77,13 @@ function renderizar(categoria) {
     card.style.background = "#eee";
 
     card.innerHTML = `
-      <img src="${item.archivo}" alt="${item.titulo}" 
+      <img src="${item.imagen}" alt="${item.titulo}"
            style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.3s;">
       <div style="position:absolute;inset:0;background:rgba(194,24,91,0.7);
            display:flex;align-items:center;justify-content:center;color:white;
            font-family:'Playfair Display',serif;font-size:1.4rem;opacity:0;
            transition:opacity 0.3s;"
-           onmouseover="this.style.opacity='1'" 
-           onmouseout="this.style.opacity='0'">Ver trabajo</div>
-    `;
-
-    card.onclick = () => abrirModal(item);
-    grid.appendChild(card);
-  });
-}
-
-function renderizar(categoria) {
-  console.log("[GALERIA] Renderizando categoría:", categoria);
-  if (!grid) {
-    console.error("[GALERIA] No se encontró #galeriaGrid");
-    return;
-  }
-  grid.innerHTML = "";
-
-  let filtrados = [];
-
-if (categoria === "todos") {
-    filtrados = datos;
-} else if (categoria === "colores") {
-    filtrados = datos.filter(item =>
-        !["rosas", "negras"].includes(item.categoria)
-    );
-} else {
-    filtrados = datos.filter(item =>
-        item.categoria === categoria
-    );
-}
-
-  filtrados.forEach(item => {
-    const card = document.createElement("div");
-    card.className = "galeria-item";
-    card.style.position = "relative";
-    card.style.overflow = "hidden";
-    card.style.borderRadius = "16px";
-    card.style.aspectRatio = "1";
-    card.style.cursor = "pointer";
-    card.style.background = "#eee";
-
-    card.innerHTML = `
-      <img src="${item.imagen}" alt="${item.titulo}" 
-           style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.3s;">
-      <div style="position:absolute;inset:0;background:rgba(194,24,91,0.7);
-           display:flex;align-items:center;justify-content:center;color:white;
-           font-family:'Playfair Display',serif;font-size:1.4rem;opacity:0;
-           transition:opacity 0.3s;"
-           onmouseover="this.style.opacity='1'" 
+           onmouseover="this.style.opacity='1'"
            onmouseout="this.style.opacity='0'">Ver trabajo</div>
     `;
 
@@ -151,7 +103,7 @@ filtroBtns.forEach(btn => {
 });
 
 function abrirModal(item) {
-  console.log("[MODAL] Abriendo con imagen:", item.archivo);
+  console.log("[MODAL] Abriendo con imagen:", item.imagen);
   if (!modal) {
     console.error("[MODAL] No se encontró #modal");
     return;
