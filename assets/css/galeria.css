@@ -29,7 +29,7 @@
     .section-subtitle { text-align: center; color: var(--gray); margin-bottom: 60px; font-size: 1.1rem; }
 
     /* Top bar */
-    .top-bar { background: var(--primary-dark); color: #fff; font-size: 0.85rem; padding: 7px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .top-bar {  background: var(--primary-dark); color: #fff; font-size: 0.85rem; padding: 7px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
     .top-bar .contact-info { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
     .top-bar .contact-info i { color: var(--accent); margin-right: 6px; }
 
